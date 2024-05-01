@@ -1,2 +1,8 @@
 yfinance
 plotly
+numpy
+pandas
+datetime
+matplotlib
+scipy
+streamlit
