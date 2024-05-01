@@ -38,7 +38,7 @@ if submitted:
         st.write("2024-01-01")
     
     # -------- D A T A - D O W N L O A D -------- #
-    stock_raw = yf.download(["INFY.NS","TCS.NS","TECHM.NS","WIPRO.NS"], start='2014-01-01', end='2024-01-01')
+    stock_raw = yf.download(list(tickers), start=str(start_date), end=str(end_date))
     stock_data = pd.DataFrame(stock_raw)
     stock_data = stock_data.loc[:,'Close']
 
@@ -63,5 +63,5 @@ if submitted:
     st.plotly_chart(fig1)
 
     # -------- VALUE AT RISK (Monte Carlo) -------- #
-    
+
     
